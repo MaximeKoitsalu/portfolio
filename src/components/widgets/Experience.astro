@@ -1,0 +1,196 @@
+---
+const {} = Astro.props;
+---
+
+<section class="relative">
+  <div class="absolute inset-0 pointer-events-none mb-32" aria-hidden="true">
+  </div>
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+      <div class="mb-8">
+        <h2
+          id="experience"
+          class="max-w-lg mb-2 font-sans text-2xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5 group"
+        >
+          <span class="inline-block mb-1 sm:mb-4"
+            ><span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500"
+              >02.
+            </span> Where I've Worked
+          </span>
+        </h2>
+        <div class="py-6 flex flex-col justify-center sm:py-12">
+          <section class="py-6 mx-auto space-y-8 sm:py-6">
+            <div
+              class="container flex flex-row items-stretch justify-center w-full max-w-4xl space-x-12"
+              x-data="{tab: 1}"
+            >
+              <div class="flex flex-col justify-start w-1/4 space-y-4">
+                <a
+                  class="px-4 py-2 text-sm"
+                  :class="{'z-20 border-l-2 transform translate-x-2 dark:border-white border-gray-900 font-bold': tab === 1, ' transform -translate-x-2': tab !== 1}"
+                  href="#"
+                  @click.prevent="tab = 1"
+                >
+                  Jeppesen / Boeing
+                </a>
+                <a
+                  class="px-4 py-2 text-sm"
+                  :class="{'z-20 border-l-2 transform translate-x-2 dark:border-white border-gray-900 font-bold': tab === 2, ' transform -translate-x-2': tab !== 2}"
+                  href="#"
+                  @click.prevent="tab = 2"
+                  @click.prevent="tab = 2"
+                >
+                  GigPort
+                </a>
+                <a
+                  class="px-4 py-2 text-sm"
+                  :class="{'z-20 border-l-2 transform translate-x-2 dark:border-white border-gray-900 font-bold': tab === 3, ' transform -translate-x-2': tab !== 3}"
+                  href="#"
+                  @click.prevent="tab = 3"
+                  @click.prevent="tab = 3"
+                >
+                  Trovisio
+                </a>
+              </div>
+              <div class="w-3/4 tab-container">
+                <div x-show="tab === 1">
+                  <h3
+                    class="text-xl font-bold leading-tight mb-2"
+                    x-show="tab === 1"
+                    x-transition:enter="transition duration-500 transform ease-in"
+                    x-transition:enter-start="opacity-0"
+                  >
+                    Front-End Software Engineer <span
+                      class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500"
+                      >@ Jeppesen / Boeing
+                    </span>
+                  </h3>
+                  <p
+                    class="text-base text-gray-500 dark:text-slate-200 mb-4"
+                    x-show="tab === 1"
+                    x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                    x-transition:enter-start="opacity-0"
+                  >
+                    April 2019 - Present
+                  </p>
+                  <ul
+                    x-show="tab === 1"
+                    x-transition:enter="transition delay-200 duration-500 transform ease-in"
+                    x-transition:enter-start="opacity-0"
+                  >
+                    <li>
+                      Write modern, performant, and robust code for a diverse
+                      array of internal projects
+                    </li>
+                    <li>
+                      Work with a variety of different languages and frameworks,
+                      such as JavaScript, TypeScript, Angular, Angular Material,
+                      NgRx, NGXS, RxJS, Node.js, canvas, etc.
+                    </li>
+                    <li>
+                      Communicate and collaborate with multi-disciplinary teams
+                      of engineers, designers, producers, clients, and
+                      stakeholders daily
+                    </li>
+                  </ul>
+                </div>
+
+                <div x-show="tab === 2">
+                  <h3
+                    class="text-xl font-bold leading-tight mb-2"
+                    x-show="tab === 2"
+                    x-transition:enter="transition duration-500 transform ease-in"
+                    x-transition:enter-start="opacity-0"
+                  >
+                    Co-Founder & Front-End Software Engineer <span
+                      class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500"
+                      >@ GigPort
+                    </span>
+                  </h3>
+                  <p
+                    class="text-base text-gray-500 dark:text-slate-200 mb-4"
+                    x-show="tab === 2"
+                    x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                    x-transition:enter-start="opacity-0"
+                  >
+                    January 2020 - Present
+                  </p>
+                  <ul
+                    x-show="tab === 2"
+                    x-transition:enter="transition delay-200 duration-500 transform ease-in"
+                    x-transition:enter-start="opacity-0"
+                  >
+                    <li>
+                      Developed and maintained major features of GigPorts
+                      customer-facing app using Vue, Vuetify, Material Design,
+                      State Management, MJML for email templates, etc.
+                    </li>
+                    <li>
+                      Implemented BankID and i18n internationalization. Ensured
+                      compatibility and mobile responsiveness with various
+                      devices and browsers
+                    </li>
+                    <li>
+                      Worked closely with the management team and backend
+                      developers to turn ideas into reality
+                    </li>
+                  </ul>
+                </div>
+
+                <div x-show="tab === 3">
+                  <h3
+                    class="text-xl font-bold leading-tight mb-2"
+                    x-show="tab === 3"
+                    x-transition:enter="transition duration-500 transform ease-in"
+                    x-transition:enter-start="opacity-0"
+                  >
+                    Founder & Team Lead Software Engineer <span
+                      class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500"
+                    >
+                      @ Trovisio
+                    </span>
+                  </h3>
+                  <p
+                    class="text-base text-gray-500 dark:text-slate-200 mb-4"
+                    x-show="tab === 3"
+                    x-transition:enter="transition delay-100 duration-500 transform ease-in"
+                    x-transition:enter-start="opacity-0"
+                  >
+                    April 2017 - April 2019
+                  </p>
+                  <ul
+                    x-show="tab === 3"
+                    x-transition:enter="transition delay-200 duration-500 transform ease-in"
+                    x-transition:enter-start="opacity-0"
+                  >
+                    <li>
+                      Engineered and architected the frontend of a web
+                      application from the ground up using React, MUI, Redux,
+                      ES6, and SCSS. Achieved high lighthouse ranking and
+                      implemented SEO
+                    </li>
+                    <li>
+                      Led a small team of developers using the agile methodology
+                      and working as a Scrum Master
+                    </li>
+                    <li>
+                      Worked on UX, branding, and marketing aspects of the
+                      organization along user experience designers
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tab-container {
+    min-height: 300px;
+  }
+</style>

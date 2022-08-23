@@ -1,0 +1,30 @@
+---
+import Layout from "~/layouts/PageLayout.astro";
+
+import { SITE } from "~/config.mjs";
+
+import Hero from "~/components/widgets/Hero.astro";
+import About from "~/components/widgets/About.astro";
+import Experience from "~/components/widgets/Experience.astro";
+import Work from "~/components/widgets/Work.astro";
+import Contact from "~/components/widgets/Contact.astro";
+import SocialLinks from "~/components/widgets/SocialLinks.astro";
+import EmailLink from "~/components/widgets/EmailLink.astro";
+
+const title = `${SITE.name} — Software Engineer & Web Developer`;
+const description =
+  "A Software Engineer and Web Developer based in Gothenburg, Sweden, with an eye for great design (UI) and even better user experience (UX).";
+const canonical = new URL("", Astro.site);
+---
+
+<Layout meta={{ title, description, canonical }}>
+  <main class="mt-20">
+    <Hero />
+    <About />
+    <Experience />
+    <Work />
+    <Contact />
+    <SocialLinks />
+    <EmailLink />
+  </main>
+</Layout>

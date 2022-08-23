@@ -1,0 +1,41 @@
+---
+import Picture from "~/components/core/Picture.astro";
+const {} = Astro.props;
+---
+
+<section id="index">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="py-12 md:py-20">
+      <div class="text-center pb-12 md:pb-16">
+        <h1
+          class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4"
+        >
+          Hello, I am
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500"
+            >Maxime.
+          </span>
+        </h1>
+        <div class="max-w-3xl mx-auto">
+          <p class="text-xl text-gray-600 mb-8 dark:text-slate-400">
+            Software Engineer — Web Developer — Oenophile
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="relative flex justify-center mb-8">
+          <div class="flex flex-col justify-center">
+            <Picture
+              src={import("~/assets/images/hero.jpg")}
+              class="mx-auto rounded-xl shadow-lg bg-gray-400 dark:bg-slate-700"
+              widths={[500, 500]}
+              sizes=" (max-width: 767px) 400px, 400px"
+              alt="Hero Image"
+              aspectRatio="1:1"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded border border-transparent font-medium text-center text-base leading-snug transition py-2 px-4 shadow-lg ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2;
+  }
+}
+
+html {
+  @apply scroll-smooth;
+  @apply scroll-p-24;
+}
+
+.font-mono-display {
+  font-family: "Major Mono Display", monospace;
+}
+
+p {
+  @apply leading-8 !important;
+}
+
+section p a {
+  @apply transition ease-in-out delay-150;
+  @apply underline;
+  @apply underline-offset-2;
+  @apply hover:underline-offset-4;
+}
+
+section li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  @apply text-gray-700 dark:text-gray-400;
+}
+section ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500;
+}
+
+.social-links {
+  width: 44px;
+  position: fixed;
+  bottom: 0px;
+  left: 30px;
+  right: auto;
+  z-index: 10;
+}
+
+.social-links ul::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  @apply bg-gray-700 dark:bg-gray-400;
+}
+
+.email-link-container {
+  width: 44px;
+  position: fixed;
+  bottom: 0px;
+  left: auto;
+  right: 40px;
+  z-index: 10;
+}
+
+.email-link-container .email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.email-link-container .email a {
+  margin: 20px auto;
+  padding: 10px;
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+}
+
+.email-link-container .email::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  @apply bg-gray-700 dark:bg-gray-400;
+}

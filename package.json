@@ -1,0 +1,41 @@
+{
+  "name": "@maximekoitsalu/portfolio",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Maxime Koitsalu",
+    "email": "maxime.koitsalu@gmail.com",
+    "url": "https://maximekoitsalu.dev"
+  },
+  "copyright": "Maxime Koitsalu",
+  "homepage": "https://maximekoitsalu.dev/",
+  "github": "https://github.com/MaximeKoitsalu/portfolio/",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MaximeKoitsalu/portfolio/issues"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build && subfont -ir --no-fallbacks --root dist",
+    "preview": "astro preview",
+    "pretty": "prettier --write ."
+  },
+  "devDependencies": {
+    "@astrojs/image": "^0.3.3",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "@fontsource/major-mono-display": "^4.5.10",
+    "@tailwindcss/typography": "^0.5.4",
+    "astro": "^1.0.0",
+    "astro-icon": "^0.7.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.0",
+    "reading-time": "^1.5.0",
+    "subfont": "^6.9.0"
+  },
+  "dependencies": {
+    "scrollmagic": "^2.0.8",
+    "sharp": "^0.30.7"
+  }
+}

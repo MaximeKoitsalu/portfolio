@@ -1,0 +1,57 @@
+---
+import { Icon } from "astro-icon";
+const {} = Astro.props;
+---
+
+<footer
+  slot="footer"
+  class="px-4 flex flex-col items-center gap-4 py-5 text-center"
+>
+  <span
+    class="italic max-w-[50ch]"
+    title="This site uses Google Analytics (which adds cookies) to measure the number of users and the countries they are from. I don't store any of your private identifiable information."
+    >This site uses Google Analytics (which adds cookies) to measure the number
+    of unique visitors.
+  </span>
+  <div class="flex flex-row lg:invisible visible">
+    <a
+      href="https://github.com/MaximeKoitsalu"
+      class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+      target="_blank"
+      rel="noopener"
+      ><Icon class="w-6 h-6" name="iconoir:github-outline" />
+    </a>
+    <a
+      href="https://www.instagram.com/kottartillsalu/"
+      class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+      target="_blank"
+      rel="noopener"
+      ><Icon class="w-6 h-6" name="iconoir:instagram" />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/maximekoitsalu/"
+      class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+      target="_blank"
+      rel="noopener"
+      ><Icon class="w-6 h-6" name="iconoir:linkedin" />
+    </a>
+    <a
+      href="https://codepen.io/MaximeKoitsalu"
+      class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+      target="_blank"
+      rel="noopener"
+      ><Icon class="w-6 h-6" name="iconoir:codepen" />
+    </a>
+  </div>
+  <a
+    href="#index"
+    id="back-to-top"
+    class="border-solid border-2 dark:border-white border-gray-900 rounded-xl p-2 dark:hover:bg-gray-800 hover:bg-slate-100"
+  >
+    <div class="flex items-center gap-2 whitespace-nowrap">
+      <Icon class="w-6 h-6" name="eva:arrow-upward-fill" />
+      Back To Top
+    </div>
+  </a>
+  <span>© 2022 Maxime Koitsalu. All rights reserved.</span>
+</footer>

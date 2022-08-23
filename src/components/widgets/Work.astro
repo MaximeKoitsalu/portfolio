@@ -1,0 +1,87 @@
+---
+import Picture from "../core/Picture.astro";
+
+const {} = Astro.props;
+---
+
+<section class="relative">
+  <div class="absolute inset-0 pointer-events-none mb-32" aria-hidden="true">
+  </div>
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6">
+    <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
+      <div class="mb-8">
+        <h2
+          id="work"
+          class="max-w-lg mb-2 font-sans text-2xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5 group"
+        >
+          <span class="inline-block mb-1 sm:mb-4"
+            ><span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500"
+              >03.
+            </span> Some Things I’ve Built
+          </span>
+        </h2>
+
+        <div class="flex flex-col px-8 mx-auto space-y-12 max-w-7xl xl:px-12">
+          <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
+            <div
+              class="flex items-center mb-8 sm:w-1/2 md:w-5/12 sm:order-last"
+            >
+              <Picture
+                src={import("~/assets/images/gigport.jpg")}
+                class="rounded-lg shadow-xl"
+                widths={[400, 768]}
+                alt="GigPort webpage image"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pr-16"
+            >
+              <p
+                class="mb-2 text-sm font-semibold leading-none text-left bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500"
+              >
+                Featured Project
+              </p>
+              <h3 class="mt-2 text-xl sm:text-left md:text-2xl">GigPort</h3>
+              <p
+                class="mt-5 text-gray-700 dark:text-gray-400 text-lg md:text-left"
+              >
+                A web app for contractors and employers to connect. A profile
+                system for contractors and an advanced search for employers. The
+                app is built with Vue, Vuetify, Node, Express, and PostgreSQL.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
+            <div class="flex items-center mb-8 sm:w-1/2 md:w-5/12">
+              <Picture
+                src={import("~/assets/images/trovisio.jpg")}
+                class="rounded-lg shadow-xl"
+                widths={[400, 768]}
+                alt="Trovisio webpage image"
+              />
+            </div>
+            <div
+              class="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pl-16"
+            >
+              <p
+                class="mb-2 text-sm font-semibold leading-none text-left bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500"
+              >
+                Featured Project
+              </p>
+              <h3 class="mt-2 text-xl sm:text-left md:text-2xl">Trovisio</h3>
+              <p
+                class="mt-5 text-gray-700 dark:text-gray-400 text-lg text md:text-left"
+              >
+                Before Trovisios demise, it was a website for a managers to
+                build teams based on the in house competense of their employees.
+                It was built with React, Redux, MUI, Node, Express, and
+                PostgreSQL.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
