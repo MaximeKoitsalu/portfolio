@@ -76,7 +76,7 @@ section ul li::before {
 }
 
 .email-link-container .email a {
-  margin: 20px auto;
+  margin: 10px auto;
   padding: 10px;
   letter-spacing: 0.1em;
   writing-mode: vertical-rl;
