@@ -7,7 +7,7 @@ const {} = Astro.props;
 <section class="relative flex items-center">
   <div class="absolute inset-0 pointer-events-none mb-32" aria-hidden="true">
   </div>
-  <div class="relative flex items-center max-w-5xl mx-auto px-4 sm:px-6">
+  <div class="relative flex items-center max-w-4xl mx-auto px-4 sm:px-6">
     <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
       <div class="mb-8">
         <h2
@@ -22,10 +22,12 @@ const {} = Astro.props;
           </span>
         </h2>
 
-        <div class="flex flex-col px-8 mx-auto space-y-12 max-w-full xl:px-12">
-          <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
+        <div class="flex flex-col mx-auto space-y-12 max-w-full">
+          <div
+            id="feature-1"
+            class="flex flex-col mb-8 animated fadeIn sm:flex-row"
+          >
             <div
-              id="feature-1"
               class="flex items-center mb-8 sm:w-1/2 md:w-5/12 sm:order-last"
             >
               <Picture
@@ -36,7 +38,6 @@ const {} = Astro.props;
               />
             </div>
             <div
-              id="feature-text-1"
               class="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pr-16"
             >
               <p
@@ -54,11 +55,11 @@ const {} = Astro.props;
               </p>
             </div>
           </div>
-          <div class="flex flex-col mb-8 animated fadeIn sm:flex-row">
-            <div
-              id="feature-2"
-              class="flex items-center mb-8 sm:w-1/2 md:w-5/12"
-            >
+          <div
+            id="feature-2"
+            class="flex flex-col mb-8 animated fadeIn sm:flex-row"
+          >
+            <div class="flex items-center mb-8 sm:w-1/2 md:w-5/12">
               <Picture
                 src={import("~/assets/images/trovisio.jpg")}
                 class="rounded-lg shadow-xl"
@@ -94,9 +95,7 @@ const {} = Astro.props;
 
 <script is:inline>
   import ScrollReveal from "scrollreveal";
-  ScrollReveal().reveal("#work");
-  ScrollReveal().reveal("#feature-text-1");
-  ScrollReveal().reveal("#feature-1");
-  ScrollReveal().reveal("#feature-2");
-  ScrollReveal().reveal("#feature-text-2");
+  ScrollReveal().reveal("#work", { duration: 200 });
+  ScrollReveal().reveal("#feature-1", { duration: 200 });
+  ScrollReveal().reveal("#feature-2", { duration: 200 });
 </script>
