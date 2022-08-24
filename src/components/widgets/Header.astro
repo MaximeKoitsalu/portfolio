@@ -1,5 +1,5 @@
 ---
-import { IconSun, IconMenu } from "~/components/icons";
+import Icon from "astro-icon";
 const {} = Astro.props;
 ---
 
@@ -21,14 +21,14 @@ const {} = Astro.props;
           aria-label="Toggle between Dark and Light mode"
           onclick="window.toggleDarkMode()"
         >
-          <IconSun class="w-6 h-6" />
+          <Icon class="w-6 h-6" name="iconoir:sun-light" />
         </button>
         <button
           class="ml-1.5 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
           aria-label="Toggle Menu"
           onclick="toggleMenu()"
         >
-          <IconMenu class="w-6 h-6" />
+          <Icon class="w-6 h-6" name="iconoir:menu" />
         </button>
       </div>
     </div>
@@ -95,7 +95,7 @@ const {} = Astro.props;
           </a>
         </li>
       </ul>
-      <div class="border-l ml-4 mr-2 dark:border-slate-300 border-gray-900 h-4">
+      <div class="hidden md:flex border-l ml-4 mr-2 dark:border-slate-300 border-gray-900 h-4">
       </div>
       <div
         class="md:self-center flex items-center mb-4 md:mb-0 collapse collapsed"
@@ -108,7 +108,7 @@ const {} = Astro.props;
             aria-label="Toggle between Dark and Light mode"
             onclick="window.toggleDarkMode()"
           >
-            <IconSun />
+            <Icon class="w-6 h-6" name="iconoir:sun-light" />
           </button>
         </div>
       </div>
