@@ -57,8 +57,16 @@ const absoluteImageUrl = new URL(image, Astro.site);
 <!-- Scripts -->
 <script defer src="https://unpkg.com/alpinejs@3.10.3/dist/cdn.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
-<!-- Google Site Verification -->
-<meta
-  name="google-site-verification"
-  content="orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M"
-/>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-25WM2W4F3W"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-25WM2W4F3W");
+</script>
