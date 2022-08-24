@@ -21,6 +21,10 @@ p {
   @apply leading-8 !important;
 }
 
+section {
+  min-height: 80vh;
+}
+
 section p a {
   @apply transition ease-in-out delay-150;
   @apply underline;

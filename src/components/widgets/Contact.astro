@@ -2,7 +2,7 @@
 const {} = Astro.props;
 ---
 
-<section class="relative">
+<section class="relative flex items-center">
   <div class="absolute inset-0 pointer-events-none mb-32" aria-hidden="true">
   </div>
   <div class="relative max-w-4xl mx-auto px-4 sm:px-6">
@@ -17,12 +17,13 @@ const {} = Astro.props;
             >04.
           </span> What's Next?
         </h2>
-        <h2 class="text-5xl mb-6">Get in Touch</h2>
-        <p class="max-w-xl mx-auto mb-4">
-          I'm always happy to hear from you. Whether you have a question or just want to say hi,
-          I'll try my best to get back to you!
+        <h2 id="title" class="text-5xl mb-6">Get in Touch</h2>
+        <p id="description" class="max-w-xl mx-auto mb-4">
+          I'm always happy to hear from you. Whether you have a question or just
+          want to say hi, I'll try my best to get back to you!
         </p>
         <a
+          id="say-hello"
           class="btn text-white bg-gray-900 hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-800"
           href="mailto:maxime.koitsalu@gmail.com"
           target="_blank"
@@ -34,3 +35,10 @@ const {} = Astro.props;
     </div>
   </div>
 </section>
+<script>
+  import ScrollReveal from "scrollreveal";
+  ScrollReveal().reveal("#contact");
+  ScrollReveal().reveal("#title");
+  ScrollReveal().reveal("#description");
+  ScrollReveal().reveal("#say-hello");
+</script>

@@ -2,7 +2,7 @@
 const {} = Astro.props;
 ---
 
-<section class="relative">
+<section class="relative flex items-center">
   <div class="absolute inset-0 pointer-events-none mb-32" aria-hidden="true">
   </div>
   <div class="relative max-w-4xl mx-auto px-4 sm:px-6">
@@ -19,7 +19,7 @@ const {} = Astro.props;
             </span> About Me
           </span>
         </h2>
-        <p class="text-gray-700 dark:text-gray-400 text-lg">
+        <p id="about-text" class="text-gray-700 dark:text-gray-400 text-lg">
           Hey, I am Maxime Koitsalu (pronounced Mak-sim Kojt-salu), I'm
           currently working under the umbrella of my consulting company
           <a href="https://kokodo.se" class="font-mono-display">KOKODO</a>, as a
@@ -47,3 +47,9 @@ const {} = Astro.props;
     </div>
   </div>
 </section>
+
+<script>
+  import ScrollReveal from "scrollreveal";
+  ScrollReveal().reveal("#about");
+  ScrollReveal().reveal("#about-text");
+</script>
