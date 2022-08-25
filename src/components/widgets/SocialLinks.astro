@@ -43,3 +43,11 @@ const {} = Astro.props;
     </li>
   </ul>
 </div>
+
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    window
+      .ScrollReveal()
+      .reveal(".social-links", { delay: 2000, mobile: false });
+  });
+</script>

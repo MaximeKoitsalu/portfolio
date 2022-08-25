@@ -7,7 +7,7 @@ const {} = Astro.props;
   </div>
   <div class="relative flex items-center max-w-4xl mx-auto px-4 sm:px-6">
     <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
-      <div class="mb-8">
+      <div id="experience-block" class="mb-8">
         <h2
           id="experience"
           class="max-w-lg mb-2 font-sans text-2xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5 group"
@@ -194,3 +194,9 @@ const {} = Astro.props;
     min-height: 300px;
   }
 </style>
+
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    window.ScrollReveal().reveal("#experience-block", { delay: 500, duration: 700 });
+  });
+</script>

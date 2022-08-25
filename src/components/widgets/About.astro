@@ -7,7 +7,7 @@ const {} = Astro.props;
   </div>
   <div class="relative max-w-4xl mx-auto px-4 sm:px-6">
     <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
-      <div class="mb-8">
+      <div id="about-block" class="mb-8">
         <h2
           id="about"
           class="max-w-lg mb-2 font-sans text-2xl font-bold tracking-tight sm:text-4xl sm:leading-none lg:mb-5 group"
@@ -19,12 +19,16 @@ const {} = Astro.props;
             </span> About Me
           </span>
         </h2>
-        <p id="about-text" class="text-gray-700 dark:text-gray-400 text-lg">
+        <p
+          id="about-text"
+          class="text-gray-700 dark:text-gray-400 text-lg lg:text-justify"
+        >
           Hey, I am Maxime Koitsalu (pronounced Mak-sim Kojt-salu), I'm
           currently working under the umbrella of my consulting company
           <a href="https://kokodo.se" class="font-mono-display">KOKODO</a>, as a
-          Software Engineer for <a href="https://ww2.jeppesen.com/">Jeppesen</a
-          >. From a very young age, I've always been interested in tech and
+          Software Engineer for <a href="https://ww2.jeppesen.com/"
+            >Jeppesen
+          </a>. From a very young age, I've always been interested in tech and
           science. Initially, I started web development out of my adventures on
           a relic of the past called Neopets, which then evolved to creating
           websites for private Tibia servers. It eventually became a hobby, and
@@ -47,3 +51,9 @@ const {} = Astro.props;
     </div>
   </div>
 </section>
+
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    window.ScrollReveal().reveal("#about-block", { delay: 500, duration: 700 });
+  });
+</script>

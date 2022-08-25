@@ -14,3 +14,10 @@ const {} = Astro.props;
     </a>
   </div>
 </div>
+<script is:inline>
+  window.addEventListener("DOMContentLoaded", () => {
+    window
+      .ScrollReveal()
+      .reveal(".email-link-container", { delay: 2000, mobile: false });
+  });
+</script>
