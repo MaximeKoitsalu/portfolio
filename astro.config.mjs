@@ -24,5 +24,10 @@ export default defineConfig({
     ssr: {
       external: ["svgo"],
     },
+    build: {
+      rollupOptions: {
+        external: ["scrollreveal"],
+      },
+    },
   },
 });
