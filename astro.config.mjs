@@ -28,7 +28,10 @@ export default defineConfig({
     },
     build: {
       rollupOptions: {
-        external: ["scrollreveal"],
+        external: [
+          "scrollreveal",
+          "alpinejs"
+        ],
       },
     },
   },
