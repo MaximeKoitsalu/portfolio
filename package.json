@@ -26,7 +26,6 @@
     "@astrojs/image": "^0.3.6",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
-    "@astrojs/partytown": "^1.0.0",
     "@tailwindcss/typography": "^0.5.4",
     "astro": "^1.0.9",
     "astro-icon": "^0.7.3",

@@ -20,8 +20,7 @@ export default defineConfig({
       },
     }),
     sitemap(),
-    image(),
-    partytown(),
+    image()
   ],
   vite: {
     ssr: {
