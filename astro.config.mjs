@@ -1,11 +1,10 @@
 import { defineConfig } from "astro/config";
 
-import partytown from '@astrojs/partytown';
+import partytown from "@astrojs/partytown";
 import tailwind from "@astrojs/tailwind";
-import alpine from '@astrojs/alpinejs';
+import alpine from "@astrojs/alpinejs";
 import sitemap from "@astrojs/sitemap";
 import image from "@astrojs/image";
-
 
 import { SITE } from "./src/config.mjs";
 
@@ -23,7 +22,7 @@ export default defineConfig({
     }),
     sitemap(),
     image(),
-    partytown()
+    partytown(),
   ],
   vite: {
     ssr: {
@@ -31,10 +30,7 @@ export default defineConfig({
     },
     build: {
       rollupOptions: {
-        external: [
-          "scrollreveal",
-          "alpinejs"
-        ],
+        external: ["scrollreveal", "alpinejs"],
       },
     },
   },
