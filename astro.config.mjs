@@ -1,9 +1,11 @@
 import { defineConfig } from "astro/config";
 
+import partytown from '@astrojs/partytown';
 import tailwind from "@astrojs/tailwind";
 import alpine from '@astrojs/alpinejs';
 import sitemap from "@astrojs/sitemap";
 import image from "@astrojs/image";
+
 
 import { SITE } from "./src/config.mjs";
 
