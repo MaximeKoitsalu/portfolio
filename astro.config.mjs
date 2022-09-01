@@ -20,15 +20,15 @@ export default defineConfig({
       },
     }),
     sitemap(),
-    image()
+    image(),
   ],
   vite: {
     ssr: {
-      external: ["svgo"],
+      external: ["scrollreveal", "alpinejs", "atropos"],
     },
     build: {
       rollupOptions: {
-        external: ["scrollreveal", "alpinejs"],
+        external: ["scrollreveal", "alpinejs", "atropos"],
       },
     },
   },

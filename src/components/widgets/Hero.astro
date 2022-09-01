@@ -29,15 +29,26 @@ const {} = Astro.props;
       <div>
         <div class="relative flex justify-center mb-8">
           <div class="flex flex-col justify-center">
-            <Picture
-              id="hero-image"
-              src={import("~/assets/images/hero.jpg")}
-              class="mx-auto rounded-xl shadow-lg bg-gray-400 dark:bg-slate-700"
-              widths={[500, 500]}
-              sizes=" (max-width: 767px) 400px, 400px"
-              alt="Hero Image"
-              aspectRatio="1:1"
-            />
+            <div class="atropos">
+              <!-- scale container (required) -->
+              <div class="atropos-scale">
+                <!-- rotate container (required) -->
+                <div class="atropos-rotate">
+                  <!-- inner container (required) -->
+                  <div class="atropos-inner">
+                    <Picture
+                      id="hero-image"
+                      src={import("~/assets/images/hero.jpg")}
+                      class="mx-auto rounded-xl shadow-lg bg-gray-400 dark:bg-slate-700"
+                      widths={[500, 500]}
+                      sizes=" (max-width: 767px) 400px, 400px"
+                      alt="Hero Image"
+                      aspectRatio="1:1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -47,6 +58,9 @@ const {} = Astro.props;
 
 <script is:inline>
   window.addEventListener("DOMContentLoaded", () => {
+    window.Atropos({
+      el: ".atropos",
+    });
     window
       .ScrollReveal({ delay: 1100 })
       .reveal("#hero-title", { duration: 200, origin: "bottom" });
