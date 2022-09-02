@@ -120,15 +120,28 @@ const {} = Astro.props;
 
 <script is:inline>
   window.addEventListener("DOMContentLoaded", () => {
+    window.ScrollReveal().reveal("#header", {
+      duration: 1000,
+      easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+    });
     window.ScrollReveal().reveal("#home", {
       duration: 1000,
+      easing: "cubic-bezier(0.45, 0, 0.55, 1)",
     });
     window.ScrollReveal({ distance: "50px" });
+    window.ScrollReveal().reveal(".navbar-item", {
+      delay: 300,
+      interval: 100,
+      easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+      origin: "top",
+      mobile: false,
+    });
     window
       .ScrollReveal()
-      .reveal(".navbar-item", { delay: 300, interval: 100, origin: "top", mobile: false });
-    window
-    .ScrollReveal()
-    .reveal(".nav-group", { delay: 900, origin: "top" });
+      .reveal(".nav-group", {
+        delay: 900,
+        origin: "top",
+        easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+      });
   });
 </script>

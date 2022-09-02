@@ -46,8 +46,10 @@ const {} = Astro.props;
 
 <script is:inline>
   window.addEventListener("DOMContentLoaded", () => {
-    window
-      .ScrollReveal()
-      .reveal(".social-links", { delay: 2000, mobile: false });
+    window.ScrollReveal().reveal(".social-links", {
+      delay: 2000,
+      mobile: false,
+      easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+    });
   });
 </script>

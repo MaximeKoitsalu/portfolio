@@ -34,7 +34,6 @@ const {} = Astro.props;
                 <div class="atropos-rotate">
                   <div class="atropos-inner">
                     <Picture
-                      id="hero-image"
                       src={import("~/assets/images/hero.jpg")}
                       class="mx-auto rounded-xl shadow-lg bg-gray-400 dark:bg-slate-700"
                       widths={[500, 500]}
@@ -61,19 +60,26 @@ const {} = Astro.props;
     window.Atropos({
       el: ".atropos",
     });
-    window
-      .ScrollReveal({ delay: 1100 })
-      .reveal("#hero-title", { duration: 200, origin: "bottom" });
+    window.ScrollReveal({ delay: 1100 }).reveal("#hero-title", {
+      duration: 200,
+      origin: "bottom",
+      easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+    });
     window.ScrollReveal({ delay: 1350 }).reveal("#hero-subtitle", {
       duration: 500,
       origin: "bottom",
+      easing: "cubic-bezier(0.45, 0, 0.55, 1)",
     });
-    window
-      .ScrollReveal({ delay: 1750 })
-      .reveal("#hero-image", { duration: 500, origin: "bottom" });
-    window
-      .ScrollReveal({ delay: 2200 })
-      .reveal("#scroll-down", { duration: 500, origin: "bottom" });
+    window.ScrollReveal({ delay: 1750 }).reveal("#hero-image", {
+      duration: 500,
+      origin: "bottom",
+      easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+    });
+    window.ScrollReveal({ delay: 2200 }).reveal("#scroll-down", {
+      duration: 500,
+      origin: "bottom",
+      easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+    });
   });
 </script>
 
