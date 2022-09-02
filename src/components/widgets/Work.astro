@@ -30,12 +30,20 @@ const {} = Astro.props;
             <div
               class="flex items-center mb-8 sm:w-1/2 md:w-5/12 sm:order-last"
             >
-              <Picture
-                src={import("~/assets/images/gigport.jpg")}
-                class="rounded-lg shadow-xl"
-                widths={[500, 768]}
-                alt="GigPort webpage image"
-              />
+              <div class="atropos-first">
+                <div class="atropos-scale">
+                  <div class="atropos-rotate">
+                    <div class="atropos-inner">
+                      <Picture
+                        src={import("~/assets/images/gigport.jpg")}
+                        class="rounded-lg shadow-xl"
+                        widths={[500, 768]}
+                        alt="GigPort webpage image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               class="flex flex-col justify-center mt-5 mb-8 md:mt-0 sm:w-1/2 md:w-7/12 sm:pr-16"
@@ -60,12 +68,20 @@ const {} = Astro.props;
             class="flex flex-col mb-8 animated fadeIn sm:flex-row"
           >
             <div class="flex items-center mb-8 sm:w-1/2 md:w-5/12">
-              <Picture
-                src={import("~/assets/images/trovisio.jpg")}
-                class="rounded-lg shadow-xl"
-                widths={[400, 768]}
-                alt="Trovisio webpage image"
-              />
+              <div class="atropos-second">
+                <div class="atropos-scale">
+                  <div class="atropos-rotate">
+                    <div class="atropos-inner">
+                      <Picture
+                        src={import("~/assets/images/trovisio.jpg")}
+                        class="rounded-lg shadow-xl"
+                        widths={[400, 768]}
+                        alt="Trovisio webpage image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div
               id="feature-text-2"
@@ -96,5 +112,11 @@ const {} = Astro.props;
 <script is:inline>
   window.addEventListener("DOMContentLoaded", () => {
     window.ScrollReveal().reveal("#work-block", { delay: 500, duration: 700 });
+    window.Atropos({
+      el: ".atropos-first",
+    });
+    window.Atropos({
+      el: ".atropos-second",
+    });
   });
 </script>

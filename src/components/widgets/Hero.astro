@@ -3,10 +3,10 @@ import Picture from "~/components/core/Picture.astro";
 const {} = Astro.props;
 ---
 
-<section id="index">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="py-12 md:py-20">
-      <div class="text-center pb-12 md:pb-16">
+<section id="index" class="h-screen">
+  <div class="h-100 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="py-6 md:py-10">
+      <div class="text-center pb-6 md:pb-8">
         <h1
           id="hero-title"
           class="text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4"
@@ -30,11 +30,8 @@ const {} = Astro.props;
         <div class="relative flex justify-center mb-8">
           <div class="flex flex-col justify-center">
             <div class="atropos">
-              <!-- scale container (required) -->
               <div class="atropos-scale">
-                <!-- rotate container (required) -->
                 <div class="atropos-rotate">
-                  <!-- inner container (required) -->
                   <div class="atropos-inner">
                     <Picture
                       id="hero-image"
@@ -51,6 +48,9 @@ const {} = Astro.props;
             </div>
           </div>
         </div>
+      </div>
+      <div id="scroll-down" class="mx-auto text-center">
+        <a href="#about"><span></span></a>
       </div>
     </div>
   </div>
@@ -71,5 +71,84 @@ const {} = Astro.props;
     window
       .ScrollReveal({ delay: 1750 })
       .reveal("#hero-image", { duration: 500, origin: "bottom" });
+    window
+      .ScrollReveal({ delay: 2200 })
+      .reveal("#scroll-down", { duration: 500, origin: "bottom" });
   });
 </script>
+
+<style>
+  #scroll-down {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  #scroll-down a {
+    padding-top: 60px;
+    position: relative;
+  }
+  #scroll-down a span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 50px;
+    margin-left: -15px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  #scroll-down a span::before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: scrollButtonAnimation 2s infinite;
+    animation: scrollButtonAnimation 2s infinite;
+    box-sizing: border-box;
+  }
+  @-webkit-keyframes scrollButtonAnimation {
+    0% {
+      -webkit-transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes sdb10 {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>
