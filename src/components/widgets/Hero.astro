@@ -49,7 +49,11 @@ const {} = Astro.props;
         </div>
       </div>
       <div id="scroll-down" class="mx-auto text-center">
-        <a href="#about"><span></span></a>
+        <a href="#about"
+          ><span
+            class="before:bg-gray-400 before:dark:bg-white border-gray-400 dark:border-white"
+          ></span>
+        </a>
       </div>
     </div>
   </div>
@@ -106,7 +110,7 @@ const {} = Astro.props;
     width: 30px;
     height: 50px;
     margin-left: -15px;
-    border: 2px solid #fff;
+    border: 2px solid;
     border-radius: 50px;
     box-sizing: border-box;
     font-size: 14px;
@@ -119,9 +123,7 @@ const {} = Astro.props;
     width: 6px;
     height: 6px;
     margin-left: -3px;
-    background-color: #fff;
     border-radius: 100%;
-    -webkit-animation: scrollButtonAnimation 2s infinite;
     animation: scrollButtonAnimation 2s infinite;
     box-sizing: border-box;
   }
