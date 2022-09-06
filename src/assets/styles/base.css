@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  html {
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  }
+}
+
 @layer components {
   .btn {
     @apply inline-flex items-center justify-center rounded border border-transparent font-medium text-center text-base leading-snug transition py-2 px-4 shadow-lg ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2;
@@ -39,6 +45,7 @@ section li {
   @apply text-gray-700 dark:text-gray-400;
 }
 section ul li::before {
+  font-family:'Times New Roman', Times, serif;
   content: "▹";
   position: absolute;
   left: 0px;
