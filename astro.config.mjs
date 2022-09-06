@@ -28,7 +28,7 @@ export default defineConfig({
     },
     build: {
       rollupOptions: {
-        external: [],
+        external: ["scrollreveal"],
       },
     },
   },
