@@ -25,10 +25,12 @@ const {} = Astro.props;
         >
           Hey, I am Maxime Koitsalu (pronounced Mak-sim Kojt-salu), I'm
           currently working under the umbrella of my consulting company
-          <a href="https://kokodo.se" class="font-mono-display">KOKODO</a>, as a
-          Software Engineer for <a href="https://ww2.jeppesen.com/"
-            >Jeppesen
-          </a>. From a very young age, I've always been interested in tech and
+          <a href="https://kokodo.se" class="font-mono-display" target="_blank"
+            >KOKODO ↗</a
+          >, as a Software Engineer for <a
+            href="https://ww2.jeppesen.com/"
+            target="_blank">Jeppesen ↗</a
+          >. From a very young age, I've always been interested in tech and
           science. Initially, I started web development out of my adventures on
           a relic of the past called Neopets, which then evolved to creating
           websites for private Tibia servers. It eventually became a hobby, and
@@ -54,6 +56,10 @@ const {} = Astro.props;
 
 <script is:inline>
   window.addEventListener("DOMContentLoaded", () => {
-    window.ScrollReveal().reveal("#about-block", { delay: 500, duration: 700, easing: 'cubic-bezier(0.45, 0, 0.55, 1)' });
+    window.ScrollReveal().reveal("#about-block", {
+      delay: 500,
+      duration: 700,
+      easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+    });
   });
 </script>
