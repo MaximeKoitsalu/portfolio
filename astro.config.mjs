@@ -4,7 +4,6 @@ import tailwind from "@astrojs/tailwind";
 import alpine from "@astrojs/alpinejs";
 import sitemap from "@astrojs/sitemap";
 import image from "@astrojs/image";
-import vercel from '@astrojs/vercel/serverless';
 
 import { SITE } from "./src/config.mjs";
 
@@ -12,9 +11,6 @@ import { SITE } from "./src/config.mjs";
 export default defineConfig({
   // Astro uses this full URL to generate your sitemap and canonical URLs in your final build
   site: SITE.domain,
-  output: 'server',
-  adapter: vercel(),
-
   integrations: [
     alpine(),
     tailwind({
