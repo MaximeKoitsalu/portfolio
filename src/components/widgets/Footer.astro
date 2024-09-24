@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 const {} = Astro.props;
+const currentYear = new Date().getFullYear(); // Get the current year
 ---
 
 <footer
@@ -53,5 +54,5 @@ const {} = Astro.props;
       Back to Top
     </div>
   </a>
-  <span>© 2022 Maxime Koitsalu. All rights reserved.</span>
+  <span>© {currentYear} Maxime Koitsalu. All rights reserved.</span>
 </footer>
