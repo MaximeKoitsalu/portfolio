@@ -67,16 +67,5 @@ const absoluteImageUrl = new URL(image, Astro.site);
 <script defer src="https://cdn.jsdelivr.net/npm/atropos@1.0.2/atropos.min.js"
 ></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-25WM2W4F3W"
-></script>
-
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "G-25WM2W4F3W");
-</script>
+<!-- 100% privacy-first analytics -->
+<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
